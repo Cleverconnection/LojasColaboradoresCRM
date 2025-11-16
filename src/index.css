@@ -1,0 +1,554 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* Fallback styles caso Tailwind não carregue */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 0.75rem; }
+.p-4 { padding: 1rem; }
+.p-5 { padding: 1.25rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+
+.m-0 { margin: 0; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+
+.w-full { width: 100%; }
+.w-64 { width: 16rem; }
+.w-72 { width: 18rem; }
+.h-screen { height: 100vh; }
+.min-h-screen { min-height: 100vh; }
+
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+.rounded { border-radius: 0.25rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-full { border-radius: 9999px; }
+
+.bg-slate-700 { background-color: #334155; }
+.bg-slate-800 { background-color: #1e293b; }
+.bg-slate-900 { background-color: #0f172a; }
+
+.text-gray-100 { color: #f3f4f6; }
+.text-gray-200 { color: #e5e7eb; }
+.text-gray-300 { color: #d1d5db; }
+.text-gray-400 { color: #9ca3af; }
+.text-gray-500 { color: #6b7280; }
+
+.text-blue-400 { color: #60a5fa; }
+.text-green-400 { color: #4ade80; }
+.text-red-400 { color: #f87171; }
+
+.border { border-width: 1px; }
+.border-slate-700 { border-color: #334155; }
+
+.shadow { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-x-auto { overflow-x: auto; }
+
+.space-y-6 > * + * { margin-top: 1.5rem; }
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.hidden { display: none; }
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+.top-0 { top: 0; }
+.left-0 { left: 0; }
+.right-0 { right: 0; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Ajuste fino do logo na sidebar */
+aside img[alt="Logo"] {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+
+.hover\:bg-slate-700:hover {
+  background-color: #334155;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+body, html, #root {
+  overflow-x: hidden !important;
+}
+
+/* ✨ Sidebar Buttons - Estilo separado e moderno */
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #cbd5e1;
+  background: linear-gradient(145deg, #1e293b, #334155);
+  border: 1px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+.sidebar-btn:hover {
+  color: #fff;
+  background: linear-gradient(145deg, #2563eb, #06b6d4);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Ativo */
+.sidebar-btn.active {
+  color: #fff;
+  background: linear-gradient(145deg, #2563eb, #06b6d4);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.scroll-top-visible {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+button[title="Voltar ao topo"] {
+  z-index: 999999 !important;
+}
+
+
+
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm\:flex {
+    display: flex;
+  }
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+}
+
+
+
+/* 🌌 Estilo Global dos Botões (Dark Theme Moderno) */
+button {
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Base visual do botão */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0.6rem;
+  padding: 0.65rem 1.4rem;
+  color: #f8fafc;
+  background: linear-gradient(145deg, #1e293b, #334155);
+  border: 1px solid #475569;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05),
+              0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #2563eb, #1e3a8a);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px) scale(1.02);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* 🟩 Excel */
+.btn-excel {
+  background: linear-gradient(135deg, #065f46, #10b981);
+  border-color: #059669;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
+.btn-excel:hover {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.45);
+}
+
+/* 🟥 PDF */
+.btn-pdf {
+  background: linear-gradient(135deg, #7f1d1d, #ef4444);
+  border-color: #b91c1c;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
+}
+
+.btn-pdf:hover {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.45);
+}
+
+/* Estado de loading */
+.btn-loading {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* Ícone de animação suave */
+.btn svg {
+  transition: transform 0.3s ease;
+}
+.btn:hover svg {
+  transform: translateY(-2px);
+}
+
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .lg\:flex {
+    display: flex;
+  }
+  .lg\:translate-x-0 {
+    transform: translateX(0);
+  }
+  .lg\:static {
+    position: static;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .xl\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+aside {
+  z-index: 999 !important; /* garante que a sidebar fique acima de tudo */
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  /* Reduz o padding interno dos cards */
+  .card, 
+  .shadow-lg, 
+  .rounded-xl, 
+  .border {
+    padding: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Centraliza e destaca o título do Painel de Controle */
+  h1 {
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(90deg, #3b82f6, #2dd0ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+  margin: 0.5rem auto;           /* centraliza horizontalmente */
+  display: block;
+  text-align: center;
+}
+
+  /* Diminui os títulos */
+  h2 p{
+    font-size: 1rem !important;
+  }
+
+  /* Reduz o tamanho dos números grandes */
+  .text-3xl, .text-4xl {
+    font-size: 1.8rem !important;
+  }
+
+  /* Melhora espaçamento entre cards */
+  .grid, .flex {
+    gap: 0.2rem !important;
+  }
+
+  /* Botões Excel e PDF */
+  .btn-excel, .btn-pdf {
+    padding: 0.5rem 1.3rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Corrige o alinhamento de ícones e textos */
+  .btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Tabelas e seções */
+  table {
+    font-size: 0.5rem !important;
+  }
+
+  th, td {
+    padding: 0.2rem 0.2rem !important;
+  }
+
+  /* Painel principal (Dashboard) */
+  .dashboard-container {
+    padding: 0.5rem !important;
+  }
+
+  /* Evita overflow lateral */
+  body, html {
+    overflow-x: hidden !important;
+  }
+
+  aside {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.7);
+    border-right: 1px solid rgba(148, 163, 184, 0.1);
+    transition: background 0.4s ease-in-out;
+  }
+
+  /* Suaviza elementos internos */
+  aside .sidebar-btn {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+
+  aside .sidebar-btn.active {
+    background: linear-gradient(90deg, #2563eb 0%, #06b6d4 100%);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+  } 
+  /* 📱 Botão do menu (☰) reposicionado e otimizado */
+  button.fixed.top-4.left-4 {
+    left: auto !important;
+    right: 4.2rem !important; /* fica antes do botão de logout */
+    top: 1.4rem !important;
+    width: 43px !important;
+    height: 43px !important;
+    padding: 0.35rem !important;
+    font-size: 0.85rem !important;
+    
+    background: linear-gradient(135deg, #1e293b, #334155);
+    border: 1px solid #475569;
+    color: #e2e8f0;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
+    transition: all 0.25s ease-in-out;
+  }
+
+  /* Ícone menor e centrado */
+  button.fixed.top-4.left-4 svg {
+    width: 18px !important;
+    height: 28px !important;
+  }
+
+  /* Hover/Toque – brilho e leve aumento */
+  button.fixed.top-4.left-4:hover {
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.45);
+  }
+
+
+  /* Reajusta o título para o centro novamente */
+  h1 {
+    margin-top: 0.5rem !important;
+    text-align: center;
+  }
+    
+  }
+
+  /* Selection */
+  ::selection {
+    background: #3b82f6;
+    color: white;
+  }
+
+  ::-moz-selection {
+    background: #3b82f6;
+    color: white;
+}
